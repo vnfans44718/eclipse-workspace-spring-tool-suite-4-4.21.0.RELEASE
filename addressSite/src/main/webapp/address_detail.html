@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Insert title here</title>
+</head>
+<body>
+<h1>[하이루님 주소록상세보기]</h1><hr>
+<div>
+	<a href='address_insert_form'>[주소록쓰기폼]</a>
+	<a href='address_list'>[주소록리스트]</a>
+	<a href='address_delete_action?no=124'>하이루님삭제[GET]</a>
+	<form action="address_delete_action" method="post"  style="display: inline;">
+		<input type="hidden" name="no" value="124" disabled="disabled">
+		<input type="submit" value="하이루님삭제[POST]">
+	</form>
+	<a href='address_update_form'>[하이루님 주소록수정폼]</a>
+</div>
+<p>
+	번호:124<br>
+	이름:하이루<br>
+	전화:하이루<br>
+	주소:하이루<br>
+</p>
+</body>
+</html>
+
+<!-- 
+out.println("<!DOCTYPE html>");
+out.println("<html>");
+out.println("<head>");
+out.println("<meta charset='UTF-8'>");
+out.println("<title>Insert title here</title>");
+out.println("</head>");
+out.println("<body>");
+out.println("<h1>[김경호님 주소록상세보기]</h1><hr>");
+out.println("<div>");
+out.println("	<a href='address_insert_form'>[주소록쓰기폼]</a>");
+out.println("	<a href='address_list.do'>[주소록리스트]</a>");
+out.println("	<a href='address_delete_action?no=1'>김경호님삭제[GET]</a>");
+out.println("<form action='address_delete_action' method='post'  style='display: inline;'>");
+out.println("<input type='hidden' name='no' value='124'");
+out.println("<input type='submit' value='하이루님삭제[POST]'>");
+out.println("</form>");
+out.println("	<a href='address_update_form'>[김경호님 주소록수정폼]</a>");
+out.println("</div>");
+out.println("<p>");
+out.println("	번호:1<br>");
+out.println("	이름:김경호<br>");
+out.println("	전화:123-4568<br>");
+out.println("	주소:경기도 성남시<br>");
+out.println("</p>");
+out.println("</body>");
+out.println("</html>");
+ -->

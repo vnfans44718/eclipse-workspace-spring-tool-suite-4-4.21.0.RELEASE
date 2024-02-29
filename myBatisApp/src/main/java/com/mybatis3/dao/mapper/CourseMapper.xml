@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis3.dao.mapper.CourseMapper">
+	<!-- ####################### resultMao정의 ####################### -->
+	<resultMap id="courseResultMap"
+		type="com.mybatis3.domain.Course" autoMapping="true">
+		<id column="COURSE_ID" property="courseId"/>
+
+		<!-- <association property="studentList" javaType="Student"></association> -->
+		<!-- 기본형은 그냥 넣으면 됨 -->
+		<collection property="studentList"
+			javaType="java.util.List" ofType="Student" autoMapping="true"></collection>
+
+	</resultMap>
+
+
+	<!-- /************************************************** SELECT[courses 
+		+ course_enrollment (+ students) JOIN( 1 : N ) **************************************************/ 
+		/* * resultMap : courseWithStudentsResultMap */ -->
+	<select id="findCourseByIdWithStudents" parameterType="int"
+		resultMap="courseResultMap">
+		select c.*,s.* from courses c
+		join course_enrollment ce on
+		c.course_id=ce.course_id
+		join students s on
+		ce.stud_id=s.stud_id
+		where
+		c.course_id=#{courseId}
+	</select>
+	<select id="findCourseByIdWithTutor">
+	</select>
+
+</mapper>

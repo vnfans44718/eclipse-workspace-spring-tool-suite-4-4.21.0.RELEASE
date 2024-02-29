@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis3.dao.mapper.AddressMapper">
+	<resultMap id="addressResultMap" type="com.mybatis3.domain.Address" >
+			<id column="ADDR_ID" property="addrId"/>
+			<result column="STREET" property="street"/>
+			<result column="CITY" property="city"/>
+			<result column="STATE" property="state"/>
+			<result column="ZIP" property="zip"/>
+			<result column="COUNTRY" property="country"/>
+			
+	</resultMap>
+	<select id="findAddressById" parameterType="int" resultMap="addressResultMap">
+		select * from addresses where addr_id=#{addrId}
+	</select>
+	<!-- 
+	/*************************************************
+		SELECT ( addresses + students JOIN)[ 1 : n ]
+	*************************************************/
+	 -->
+	<select id="findAddressByIdWithStudents">
+	</select>
+	<!-- 
+	/*************************************************
+		SELECT ( addresses + tutors JOIN)[ 1 : n ]
+	*************************************************/
+	 -->
+	<select id="findAddressByIdWithTutors" >
+		
+	</select>
+</mapper>

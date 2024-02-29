@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<h1>javascript core object[String]</h1>
+	<div id="resultDiv">
+		성적보여주는 영역(div )
+
+
+	</div>
+	<script type="text/javascript">
+		/****************string******************/
+		let str1 = new String("AbcdEfgh");
+		let str2 = "AbcdEfgh";
+		let str3 = "0123456789";
+		let str4 = "guard@naver.com";
+
+
+str1.charAt(0)
+		console.log(typeof str1);
+		console.log(typeof str2);
+		console.log(str1 == str2);
+		console.log(str1 === str2);
+		console.log(str1.length);
+		console.log(str1.toUpperCase());
+		console.log(str1.toLowerCase());
+		console.log(str1.substring(5));
+		console.log(str1.substring(5, 6));
+		console.log(str1.substring(5, 7));
+		/*
+		0 베이스 인덱스, 5번 포함 6번 제외
+		*/
+		console.log(str1.substr(5));
+		console.log(str1.substr(5, 1));
+		console.log(str1.substr(5, 2));
+		/*
+		 0 베이스 인덱스, 5번부터 2개 포함
+		 */
+
+		console.log(str4.indexOf('@'));
+		console.log(str4.indexOf('.'));
+		console.log(str4.replace('@', '골뱅이'));
+		console.log(str4.replace('.', '점'));
+		/****************Array******************/
+		let nameArray = new Array('KIM', 'LEE', 'PARK', 'CHOI', 'SIM');
+		let korArray = [89, 56, 87, 54, 99];
+		let engArray = [89, 56, 87, 54, 99];
+		let mathArray = [89, 56, 87, 54, 99];
+		let totArray = [0, 0, 0, 0, 0];
+		let avgArray = [];
+		for (let i = 0; i < nameArray.length; i++) {
+			totArray[i] = korArray[i] + engArray[i] + mathArray[i];
+			avgArray.push(totArray[i] / nameArray.length);
+		}
+
+		let html = '<ul>';
+		for (let i = 0; i < nameArray.length; i++) {
+
+			html += '<li>' + nameArray[i] + ',' + avgArrayp[i] + '</li>';
+		}
+		html += '</ul>';
+
+
+		let resultDiv = document.getElementById('resultDiv');
+
+		resultDiv.innerHTML = html;
+
+	</script>
+</body>
+
+</html>

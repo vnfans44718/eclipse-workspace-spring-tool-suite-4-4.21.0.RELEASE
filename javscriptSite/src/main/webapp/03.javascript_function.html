@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		/*
+		 함수정의
+		   - 윈도객체에소속된 함수가된다.
+		 */
+		let name = 'block scope 이순신';
+		let msg = 'block scope 아직도 12척의 배가 있사옵니다';
+		function head_function() {
+			window.document.write('head_function()' + msg + '<br>');
+			return;
+		}
+		function hello1() {
+			let name = "local scope 이순신";
+			let mdg = "local scope 아직도 12척의 배가 있습니다."
+			document.write(name + " 님" + msg + "[hello1]<br>")
+			return;
+		}
+
+		/*********************************/
+		function hello2(msg) {
+			/*
+			메소드 파라미처 선언시 let 키워드를 사용안함 , 타입까지 선언해야하는 java와의 차이점
+			*/
+			document.write(name + " 님" + msg + "[hello2]<br>")
+		}
+
+		function hello3(name, msg) {
+			/*
+			메소드 파라미처 선언시 let 키워드를 사용안함 , 타입까지 선언해야하는 java와의 차이점
+			*/
+			document.write(name + " 님 " + msg + "[hello3(name,msg)]<br>")
+		}
+		function hello4(name, msg, count) {
+			if (count == undefined) {
+				count = 1;
+			}
+			for (let i = 0; i < count; i++) {
+				document.write(name + "님 " + msg + count + "[hello4]<br>")
+			}
+
+
+		}
+
+
+		/*
+		동일한 이름의 function이 생성될 경우 이전의 것을 덮음 호출 시 가장 최근에 생성된 것을 사용하게됨
+		*/
+
+		/*
+		객체를 만들지 않고 fuction을 만들면 자동으로 window 객체의 function 호출도기 때문에 나중에 꼬일 수 있음
+		*/
+		/*
+		만들어지고 fuction이 호출되는 것은 아님 head에서 생성부터 하고 body에서 호출
+		java와 달리 실행 중에 객체에 멤버변수나 fuction추가 가능
+		*/
+
+		/*
+		java와 달리 fuction이 따로 존재하는게 가능
+		java는 객체가 있어야 fuction 가능
+		*/
+
+		function add(a, b) {
+			return a + b;
+		}
+
+		function sub(a, b) {
+			return a - b;
+		}
+
+		function mul(a, b) {
+			return a * b;
+		}
+		function div(a, b) {
+			return a / b;
+		}
+
+		function alert(msg) {
+			document.write("<i>내가만든경고함수" + msg + "</i><br>");
+		}
+		/*
+		alert를 선언하게되면 실제 window alert의 기능을 대체하게 됨
+		*/
+
+	</script>
+
+</head>
+
+<body>
+	<h1>자바스크립트함수</h1>
+	<hr>
+	<div>함수기반언어이다</div>
+	<script type="text/javascript">
+		//함수호출
+		window.head_function();
+		/*
+		= head_function();
+		window는 최상위 객체이기 때문에 생략이 가능
+		*/
+		hello1();
+		hello2("안녕하세요");
+		hello2("뭐하세요");
+		hello3("이효리", "으아아아");
+		hello4("이소라", "안녕하세요", 10);
+		hello4("김태희", "ㅎㅎㅎㅎ");
+		let result = add(1, 2);
+		document.write('add result: ', result, "<br>");
+		document.write('sub result: ', sub(1, 2), "<br>");
+		document.write('mul result: ', mul(1, 2), "<br>");
+		document.write('div result: ', div(1, 2), "<br>");
+		/*
+		오버로딩이 안되기 때문에 인자를 아무것도 안 넣어도 표면적으로 에러가 안 뜸
+		*/
+
+	</script>
+
+	<script type="text/javascript">
+
+		function body_end_function() {
+			document.write("body_end_funtion()<br>");
+		}
+
+
+	</script>
+</body>
+
+</html>

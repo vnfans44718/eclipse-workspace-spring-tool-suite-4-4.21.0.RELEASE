@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>HttpServletRequest객체</h1>
+<hr/>
+<ol type="1">
+	<li><a href="request?name=kim&phone=1234&address=seoul">HttpServletRequest객체1</a></li>
+	<li><a href="request?name=kang&phone=8080&address=jeju">HttpServletRequest객체2</a></li>
+</ol>
+<xmp>
+
+		[ query string ]
+			- 정의  : HTTP요청시 클라이언트가 서버로 요청시데이타를 전송하는형식 
+	  		- 형식  : name1=value1&name2=value2
+	  		- 요청예: name=kim&phone=1234&address=seoul
+  
+		  1.GET  요청방식 : request.do?name=kim&phone=1234&address=seoul
+		    
+		    - 클라이언트요청URL : http://192.168.15.31/servletSite/request?name=kim&phone=1234&address=seoul
+		    
+                	            -----------------------------------------------------------------
+             		요청라인    |GET request.do?name=kim&phone=1234&address=kyunggi HTTP/1.1    |
+             		요청헤더    |HOST:192.168.15.31                                             |
+             		.......     |...                                                            |
+                	            |---------------------------------------------------------------|
+             		요청바디    |없다                                                           |
+             		            -----------------------------------------------------------------
+		    
+		  2.POST 요청방식 : request.do  
+		  
+		    - 클라이언트요청URL : http://192.168.15.31/servletSite/request.do
+
+                	            -----------------------------------------------------------------
+             		요청라인    |POST request.do HTTP/1.1                                       |
+             		요청헤더    |HOST:192.168.15.31                                             |
+             		.......     |...                                                            |
+                	            |---------------------------------------------------------------|
+             		요청바디    |name=kim&phone=1234&address=kyunggi                            |
+             		            -----------------------------------------------------------------		    
+
+		
+</xmp>
+</body>
+</html>

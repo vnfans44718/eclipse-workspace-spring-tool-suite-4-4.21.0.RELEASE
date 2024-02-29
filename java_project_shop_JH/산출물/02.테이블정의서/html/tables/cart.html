@@ -1,0 +1,121 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Tables</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+</head>
+<body onload="setTitle()">
+<script type="text/javascript">
+function setTitle(){
+  parent.document.title="cart";
+}
+</script>
+
+<h2
+  >
+  cart
+      (cart)
+  </h2>
+
+
+<table width="100%" border="1" cellpadding="3" cellspacing="0" >
+  <tr class="TableHeadingColor">
+    <th width="1%">No.</th>
+    <th width="14%">Logical Name</th>
+    <th width="14%">Physical Name</th>
+    <th width="10%">Type</th>
+    <th width="3%">Null</th>
+    <th width="3%">Default Value</th>
+    <th width="30%">Description</th>
+  </tr>
+    <tr>
+    <td align="right" nowrap>
+              <img src="../images/primarykey.gif">
+            1
+    </td>
+    <td><strong>cart_no</strong></td>
+    <td><strong><code>cart_no</code></strong></td>
+    <td><code>NUMBER(10)</code></td>
+    <td align="center">
+          Y
+        </td>
+    <td>&nbsp;</td>
+    <td>
+              AUTO INCREMENT<br>
+            </td>
+  </tr>
+    <tr>
+    <td align="right" nowrap>
+            2
+    </td>
+    <td><strong>cart_qty</strong></td>
+    <td><strong><code>cart_qty</code></strong></td>
+    <td><code>NUMBER(10)</code></td>
+    <td align="center">
+          Y
+        </td>
+    <td>&nbsp;</td>
+    <td>
+                  &nbsp;
+        </td>
+  </tr>
+    <tr>
+    <td align="right" nowrap>
+            3
+    </td>
+    <td><strong>userid</strong></td>
+    <td><strong><code>userid</code></strong></td>
+    <td><code>VARCHAR2(100)</code></td>
+    <td align="center">
+          Y
+        </td>
+    <td>&nbsp;</td>
+    <td>
+                  &nbsp;
+        </td>
+  </tr>
+    <tr>
+    <td align="right" nowrap>
+            4
+    </td>
+    <td><strong>p_no</strong></td>
+    <td><strong><code>p_no</code></strong></td>
+    <td><code>NUMBER(10)</code></td>
+    <td align="center">
+          Y
+        </td>
+    <td>&nbsp;</td>
+    <td>
+                  &nbsp;
+        </td>
+  </tr>
+  </table>
+
+  <br>
+  <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr class="TableHeadingColor">
+      <td><strong>Foreign Keys</strong></td>
+    </tr>
+  </table>
+          <h3>cart_FK_1</h3>
+    <table border="1" cellpadding="3" cellspacing="0">
+      <tr><th>Column</th><th>Referenced Column</th></tr>
+            <tr>
+        <td><code>userid</code></td>
+        <td><code><a href="userinfo.html">userinfo.userid</a></code></td>
+      </tr>
+          </table>
+          <hr>
+        <h3>cart_FK_2</h3>
+    <table border="1" cellpadding="3" cellspacing="0">
+      <tr><th>Column</th><th>Referenced Column</th></tr>
+            <tr>
+        <td><code>p_no</code></td>
+        <td><code><a href="product.html">product.p_no</a></code></td>
+      </tr>
+          </table>
+  
+
+
+</body>
+</html>
