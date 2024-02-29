@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*
+	 1.tag selector
+	*/
+body {
+	background-color:aliceblue;
+	font-size: 17pt;
+	margin: 0px;
+}

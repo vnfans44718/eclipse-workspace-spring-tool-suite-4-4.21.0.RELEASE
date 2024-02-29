@@ -1,0 +1,62 @@
+
+
+
+h3 {
+	text-align: center;
+}
+
+form {
+	background-color: mistyrose;
+	width: 700px;
+	border: 1px solid blue;
+	margin: 10px auto 10px auto;
+	padding: 20px;
+}
+th {
+	background: #eeeeee;
+	font-size: 8pt;
+	color: #222;
+}
+/*
+2. class selector
+*/
+.TXTFLD {
+	border: 1px solid black;
+	color: blue;
+}
+
+.TXTFLD1 {
+	border: 1px dotted red;
+	color: red;
+}
+/*
+	3. id selector 
+	*/
+#jointbl {
+	background-color: tomato;
+	width: 600px;
+}
+
+#first-tr {
+	background-color: gold;
+}
+/*
+	4.attribute selector[]
+	*/
+input[type=submit] {
+	background-color: blue;
+	color: yellow;
+	font-weight: 900;
+}
+
+input[type=reset] {
+	background-color: yellow;
+	color: blue;
+	font-weight: 900;
+}
+
+[type=button] {
+	background-color: #00000000;
+	width: 100px;
+	height: 100px;
+}
